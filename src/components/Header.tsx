@@ -14,12 +14,12 @@ const Header = ({ isDarkMode, toggleTheme }: HeaderProps) => {
     <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo and Name */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-2 rounded-lg">
-              <TrendingUp className="h-6 w-6 text-white" />
+          {/* Logo and Name with Animation */}
+          <div className="flex items-center space-x-2 group cursor-pointer">
+            <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-2 rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg">
+              <TrendingUp className="h-6 w-6 text-white transition-transform duration-300 group-hover:scale-110" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent transition-all duration-300 group-hover:from-emerald-500 group-hover:to-green-500 group-hover:scale-105">
               TradeTracker
             </span>
           </div>
