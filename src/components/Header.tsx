@@ -11,61 +11,61 @@ const Header = ({ isDarkMode, toggleTheme }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-white/90 dark:bg-black/90 backdrop-blur-xl border-b border-gray-200/20 dark:border-gray-800/20 sticky top-0 z-50">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo and Name with Animation */}
-          <div className="flex items-center space-x-2 group cursor-pointer">
-            <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-2 rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg">
-              <TrendingUp className="h-6 w-6 text-white transition-transform duration-300 group-hover:scale-110" />
+          {/* Logo and Name */}
+          <div className="flex items-center space-x-3 group cursor-pointer">
+            <div className="bg-black dark:bg-white p-2.5 rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <TrendingUp className="h-5 w-5 text-white dark:text-black" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent transition-all duration-300 group-hover:from-emerald-500 group-hover:to-green-500 group-hover:scale-105">
+            <span className="text-xl font-semibold text-black dark:text-white transition-all duration-300 group-hover:scale-105">
               TradeTracker
             </span>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-slate-600 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+            <a href="#features" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">
               Features
             </a>
-            <a href="#pricing" className="text-slate-600 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+            <a href="#pricing" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">
               Pricing
             </a>
-            <a href="#about" className="text-slate-600 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+            <a href="#about" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">
               About
             </a>
           </nav>
 
           {/* Right Side Controls */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               aria-label="Toggle theme"
             >
               {isDarkMode ? (
-                <Sun className="h-4 w-4 text-slate-600 dark:text-slate-300" />
+                <Sun className="h-4 w-4 text-gray-600 dark:text-gray-400" />
               ) : (
-                <Moon className="h-4 w-4 text-slate-600 dark:text-slate-300" />
+                <Moon className="h-4 w-4 text-gray-600 dark:text-gray-400" />
               )}
             </button>
 
             {/* Login Button */}
-            <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <button className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105">
               Login
             </button>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
               {isMenuOpen ? (
-                <X className="h-5 w-5 text-slate-600 dark:text-slate-300" />
+                <X className="h-5 w-5 text-gray-600 dark:text-gray-400" />
               ) : (
-                <Menu className="h-5 w-5 text-slate-600 dark:text-slate-300" />
+                <Menu className="h-5 w-5 text-gray-600 dark:text-gray-400" />
               )}
             </button>
           </div>
@@ -73,15 +73,15 @@ const Header = ({ isDarkMode, toggleTheme }: HeaderProps) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-200 dark:border-slate-700">
+          <div className="md:hidden py-4 border-t border-gray-200/20 dark:border-gray-800/20">
             <nav className="flex flex-col space-y-4">
-              <a href="#features" className="text-slate-600 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+              <a href="#features" className="text-gray-600 dark:text-gray-400 text-sm">
                 Features
               </a>
-              <a href="#pricing" className="text-slate-600 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+              <a href="#pricing" className="text-gray-600 dark:text-gray-400 text-sm">
                 Pricing
               </a>
-              <a href="#about" className="text-slate-600 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+              <a href="#about" className="text-gray-600 dark:text-gray-400 text-sm">
                 About
               </a>
             </nav>

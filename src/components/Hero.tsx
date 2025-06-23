@@ -3,79 +3,82 @@ import { ArrowRight, BarChart3, TrendingUp, Shield } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="pt-24 pb-20 px-6 lg:px-8 relative overflow-hidden min-h-screen flex items-center">
+      {/* Background Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      
       {/* Background Images */}
-      <div className="absolute inset-0 opacity-10 dark:opacity-5">
+      <div className="absolute inset-0 opacity-5 dark:opacity-3">
         <img 
           src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop" 
           alt="Trading background" 
-          className="absolute top-0 left-0 w-1/3 h-1/2 object-cover rounded-lg"
+          className="absolute top-10 left-10 w-80 h-60 object-cover rounded-2xl"
         />
         <img 
-          src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&auto=format&fit=crop" 
           alt="Stock charts" 
-          className="absolute top-1/4 right-0 w-1/3 h-1/2 object-cover rounded-lg"
+          className="absolute bottom-10 right-10 w-80 h-60 object-cover rounded-2xl"
         />
       </div>
 
       <div className="container mx-auto text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight animate-fade-in">
-            Track Your Trades
-            <span className="block bg-gradient-to-r from-emerald-400 via-green-500 to-cyan-500 bg-clip-text text-transparent animate-pulse">
-              Like a Pro
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-black dark:text-white mb-8 leading-tight">
+            The future of
+            <span className="block text-gray-500 dark:text-gray-400">
+              trade tracking
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed animate-fade-in">
-            Monitor your portfolio, analyze performance, and make smarter trading decisions with our comprehensive trade tracking platform.
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 leading-relaxed max-w-2xl mx-auto">
+            Advanced AI-powered analytics for smarter trading decisions. Track, analyze, and optimize your portfolio like never before.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in">
-            <button className="bg-gradient-to-r from-emerald-500 via-green-500 to-cyan-500 hover:from-emerald-600 hover:via-green-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl animate-bounce flex items-center justify-center gap-2">
-              Get Started Free
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+            <button className="bg-black dark:bg-white text-white dark:text-black px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+              Get Started
               <ArrowRight className="h-5 w-5" />
             </button>
-            <button className="border-2 border-emerald-400 dark:border-emerald-500 text-emerald-600 dark:text-emerald-400 hover:border-green-500 dark:hover:border-green-400 hover:text-green-600 dark:hover:text-green-400 hover:bg-emerald-50 dark:hover:bg-emerald-950 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            <button className="border border-gray-300 dark:border-gray-700 text-black dark:text-white hover:bg-gray-50 dark:hover:bg-gray-900 px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300">
               Watch Demo
             </button>
           </div>
 
-          {/* Feature Highlights with Bright Colors */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm p-6 rounded-xl border border-emerald-200 dark:border-emerald-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
-              <div className="bg-gradient-to-r from-blue-400 to-purple-600 p-3 rounded-lg w-fit mx-auto mb-4 animate-pulse">
-                <BarChart3 className="h-6 w-6 text-white" />
+          {/* Feature Highlights */}
+          <div className="grid md:grid-cols-3 gap-8 mt-20">
+            <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-800/50 hover:scale-105 transition-all duration-300">
+              <div className="bg-black dark:bg-white p-4 rounded-xl w-fit mx-auto mb-6">
+                <BarChart3 className="h-6 w-6 text-white dark:text-black" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-4">
                 Real-time Analytics
               </h3>
-              <p className="text-slate-600 dark:text-slate-300">
-                Get instant insights into your trading performance with live charts and metrics.
+              <p className="text-gray-600 dark:text-gray-400">
+                Get instant insights with advanced AI-powered market analysis and performance tracking.
               </p>
             </div>
 
-            <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm p-6 rounded-xl border border-green-200 dark:border-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
-              <div className="bg-gradient-to-r from-emerald-400 to-cyan-600 p-3 rounded-lg w-fit mx-auto mb-4 animate-pulse">
-                <TrendingUp className="h-6 w-6 text-white" />
+            <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-800/50 hover:scale-105 transition-all duration-300">
+              <div className="bg-black dark:bg-white p-4 rounded-xl w-fit mx-auto mb-6">
+                <TrendingUp className="h-6 w-6 text-white dark:text-black" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-                Performance Tracking
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-4">
+                Smart Predictions
               </h3>
-              <p className="text-slate-600 dark:text-slate-300">
-                Monitor your wins, losses, and overall portfolio performance over time.
+              <p className="text-gray-600 dark:text-gray-400">
+                Leverage machine learning algorithms to predict market trends and optimize your strategy.
               </p>
             </div>
 
-            <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm p-6 rounded-xl border border-pink-200 dark:border-pink-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
-              <div className="bg-gradient-to-r from-pink-500 to-rose-600 p-3 rounded-lg w-fit mx-auto mb-4 animate-pulse">
-                <Shield className="h-6 w-6 text-white" />
+            <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/50 dark:border-gray-800/50 hover:scale-105 transition-all duration-300">
+              <div className="bg-black dark:bg-white p-4 rounded-xl w-fit mx-auto mb-6">
+                <Shield className="h-6 w-6 text-white dark:text-black" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
-                Secure & Private
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-4">
+                Enterprise Security
               </h3>
-              <p className="text-slate-600 dark:text-slate-300">
-                Your trading data is encrypted and secure with bank-level security protocols.
+              <p className="text-gray-600 dark:text-gray-400">
+                Bank-level encryption and security protocols to keep your trading data completely safe.
               </p>
             </div>
           </div>
