@@ -52,10 +52,18 @@ const Header = ({ isDarkMode, toggleTheme }: HeaderProps) => {
               )}
             </button>
 
-            {/* Login Button */}
-            <button className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105">
-              Login
-            </button>
+            {/* Login/Register Buttons */}
+            <div className="flex items-center space-x-2">
+              <a
+                href="/register"
+                className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm font-medium px-3 py-2"
+              >
+                Register
+              </a>
+              <button className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105">
+                Login
+              </button>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -84,6 +92,14 @@ const Header = ({ isDarkMode, toggleTheme }: HeaderProps) => {
               <a href="#about" className="text-gray-600 dark:text-gray-400 text-sm">
                 About
               </a>
+              <div className="pt-4 border-t border-gray-200/20 dark:border-gray-800/20">
+                <a href="/register" className="block text-gray-600 dark:text-gray-400 text-sm mb-2">
+                  Register
+                </a>
+                <button className="w-full bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-lg text-sm font-medium">
+                  Login
+                </button>
+              </div>
             </nav>
           </div>
         )}
